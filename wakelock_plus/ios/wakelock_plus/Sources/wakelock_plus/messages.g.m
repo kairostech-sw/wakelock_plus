@@ -86,9 +86,9 @@ static id GetNullableObjectAtIndex(NSArray<id> *array, NSInteger key) {
 @implementation WAKELOCKPLUSMessagesPigeonCodecReader
 - (nullable id)readValueOfType:(UInt8)type {
   switch (type) {
-    case 129: 
+    case 129:
       return [WAKELOCKPLUSToggleMessage fromList:[self readValue]];
-    case 130: 
+    case 130:
       return [WAKELOCKPLUSIsEnabledMessage fromList:[self readValue]];
     default:
       return [super readValueOfType:type];
